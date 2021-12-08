@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="863.0">
+         <children>
+            <Pane id="wrapper" layoutX="31.0" layoutY="125.0" prefHeight="459.0" prefWidth="794.0">
+               <children>
+                  <Button fx:id="saveButton" layoutX="412.0" layoutY="405.0" mnemonicParsing="false" onAction="#saveEditedAccount" prefHeight="23.0" prefWidth="165.0" text="Save changes!" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Sitka Small Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="goBackButton2" layoutX="233.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToAdminScreen" prefHeight="23.0" prefWidth="106.0" text="Go back" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Sitka Small Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <TitledPane animated="false" collapsible="false" layoutX="79.0" layoutY="62.0" prefHeight="146.0" prefWidth="607.0" text="Customer Details">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="4.0" prefHeight="112.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="CFname13" prefHeight="31.0" prefWidth="71.0" text="First name:">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="CFname131" prefHeight="31.0" prefWidth="71.0" text="Last name:">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="CFname1311" prefHeight="31.0" prefWidth="91.0" text="Date of birth:">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="303.0" layoutY="4.0" prefHeight="112.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="CFname131" prefHeight="31.0" prefWidth="71.0" text="Email:">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="CFname1311" prefHeight="31.0" prefWidth="82.0" text="National ID:">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="CFname13111" prefHeight="31.0" prefWidth="118.0" text="Phone number:">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="114.0" layoutY="4.0" prefHeight="112.0" prefWidth="184.0">
+                                 <children>
+                                    <TextField fx:id="textFname" prefHeight="31.0" prefWidth="173.0" />
+                                    <TextField fx:id="textLname" prefHeight="31.0" prefWidth="173.0" />
+                                    <DatePicker fx:id="textDob" prefHeight="31.0" prefWidth="198.0" promptText="mm/dd/yyyy" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="403.0" layoutY="4.0" prefHeight="112.0" prefWidth="201.0">
+                                 <children>
+                                    <TextField fx:id="textEmail" prefHeight="31.0" prefWidth="173.0" />
+                                    <TextField fx:id="textNationalID" prefHeight="31.0" prefWidth="173.0" />
+                                    <TextField fx:id="textPhoneNum" prefHeight="31.0" prefWidth="173.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <Label fx:id="CFname2" layoutX="77.0" layoutY="14.0" prefHeight="48.0" prefWidth="118.0" text="Customer ID:">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="editViewCustomerIDLabel" layoutX="199.0" layoutY="14.0" prefHeight="48.0" prefWidth="174.0" text="NAME">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TitledPane animated="false" collapsible="false" layoutX="79.0" layoutY="230.0" prefHeight="146.0" prefWidth="330.0" text="Accounts">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="524.0">
+                           <children>
+                              <TableView fx:id="tableAccount" layoutY="-2.0" prefHeight="126.0" prefWidth="330.0">
+                                <columns>
+                                  <TableColumn fx:id="C1" prefWidth="55.0" text="ID" />
+                                  <TableColumn fx:id="C2" prefWidth="140.0" text="User Name" />
+                                    <TableColumn fx:id="C3" prefWidth="134.0" text="Created Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="premField" animated="false" collapsible="false" layoutX="415.0" layoutY="230.0" prefHeight="146.0" prefWidth="271.0" text="Premession" visible="false">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="524.0">
+                           <children>
+                              <VBox layoutX="2.0" layoutY="1.0" prefHeight="117.0" prefWidth="264.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="CFname111" prefHeight="58.0" prefWidth="106.0" text="Status:">
+                                             <font>
+                                                <Font name="Calibri Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="37.0" prefWidth="156.0">
+                                             <children>
+                                                <RadioButton fx:id="ActiveRadioButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="57.0" text="Active">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="status1" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="FreezeRadioButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" text="Freeze" toggleGroup="$status1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </RadioButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="CFname1111" prefHeight="60.0" prefWidth="106.0" text="Role:" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="Calibri Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="40.0" prefWidth="129.0">
+                                             <children>
+                                                <RadioButton fx:id="AdminRadioButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="57.0" text="Admin">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="role1" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="ClientRadioButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="57.0" text="Client" toggleGroup="$role1">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </RadioButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <Label fx:id="returnedMessage" alignment="CENTER" layoutX="157.0" layoutY="381.0" prefHeight="23.0" prefWidth="480.0" textAlignment="CENTER" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="titlePane" layoutX="120.0" layoutY="33.0" prefHeight="85.0" prefWidth="634.0">
+               <children>
+                  <Label id="title" layoutX="139.0" prefHeight="85.0" prefWidth="456.0" text="ALRAJHI BANK" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri Bold" size="73.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="85.0" fitWidth="88.0" layoutX="33.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/img/icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

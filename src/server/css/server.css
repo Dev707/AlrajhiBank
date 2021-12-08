@@ -1,0 +1,27 @@
+#body {
+    -fx-background-color: #221AFB;
+}
+
+#titlePane {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 35;
+    -fx-padding: 15;
+}
+
+#title {
+    -fx-text-fill: #221AFB;
+    -fx-line-spacing: 15px;
+}
+
+.button {
+    -fx-background-color: #f4f4f4;
+    -fx-text-fill: #221AFB;
+}
+
+#consoleRespondTitle {
+    -fx-text-fill: #f4f4f4;
+}
+
+#listOfCustomersTitle {
+    -fx-text-fill: #f4f4f4;
+}

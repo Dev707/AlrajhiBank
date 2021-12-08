@@ -1,0 +1,28 @@
+#body {
+    -fx-background-color: #221AFB;
+}
+
+#titlePane {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 35;
+    -fx-padding: 15;
+}
+
+#title {
+    -fx-text-fill: #221AFB;
+    -fx-line-spacing: 15px;
+}
+
+#wrapper {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 35;
+}
+
+.label {
+    -fx-text-fill: #221AFB;
+}
+
+.button {
+    -fx-background-color: #221AFB;
+    -fx-text-fill: #f4f4f4;
+}

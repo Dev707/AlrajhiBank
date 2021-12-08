@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="wrapper" layoutX="27.0" layoutY="123.0" prefHeight="459.0" prefWidth="794.0">
+         <children>
+            <Label layoutX="191.0" layoutY="177.0" text="National ID:">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="NIDTextField" layoutX="191.0" layoutY="194.0" prefHeight="25.0" prefWidth="412.0" promptText="0123456789 (10 Numbers)" />
+            <Button fx:id="goBackButton" layoutX="285.0" layoutY="279.0" mnemonicParsing="false" onAction="#goBack" prefHeight="23.0" prefWidth="106.0" text="Go back" textAlignment="RIGHT">
+               <font>
+                  <Font name="Sitka Small Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="NextButton" layoutX="425.0" layoutY="279.0" mnemonicParsing="false" onAction="#next" prefHeight="23.0" prefWidth="106.0" text="Next">
+               <font>
+                  <Font name="Sitka Small Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane id="titlePane" layoutX="110.0" layoutY="31.0" prefHeight="85.0" prefWidth="634.0">
+         <children>
+            <Label id="title" layoutX="139.0" prefHeight="85.0" prefWidth="456.0" text="ALRAJHI BANK" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="73.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="78.0" fitWidth="91.0" layoutX="33.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/img/icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
